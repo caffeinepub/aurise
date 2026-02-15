@@ -1,0 +1,118 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Aurise — Dark Fantasy Aura Landing (React)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a minimal application shell with a single landing page that displays the app name “Aurise”.",
+      "acceptanceCriteria": [
+        "Opening the app shows a landing page with the title text “Aurise”.",
+        "No placeholder/lorem-ipsum branding text is visible on the page."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the root React component that renders the single landing page (no extra routes/pages) and ensures the visible primary heading text is exactly “Aurise”."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Ensure the document title is set to “Aurise” and the base HTML remains minimal for a single-page landing experience."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Apply a cohesive dark fantasy “aura” theme (high-contrast dark background, glowing accents, dramatic typography) across the landing page with English-only UI text.",
+      "acceptanceCriteria": [
+        "The landing page uses a consistent dark + glowing-aura aesthetic (background, typography, and UI accents feel like one theme).",
+        "All visible UI text is in English."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add global theme tokens and base styles to support a dark, high-contrast aura aesthetic (typography, colors, and reusable glow utilities) applied consistently to the landing UI."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme settings to support aura-themed design primitives (e.g., custom colors/shadows/animations) used by the landing page styling."
+        },
+        {
+          "path": "frontend/src/features/landing/LandingPage.tsx",
+          "operation": "create",
+          "description": "Implement the landing page layout and UI elements using the aura theme and English-only copy. Use shadcn-ui components (e.g., Button/Card where available) to compose consistent UI elements without editing immutable ui component files. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the LandingPage into the app shell so the landing page is the only rendered page and the theme styling is applied consistently."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add a smooth animated aura visual effect to the landing page with graceful reduced-motion behavior.",
+      "acceptanceCriteria": [
+        "The aura effect animates continuously without blocking page interaction.",
+        "If the user prefers reduced motion, the animation is reduced or replaced with a static/low-motion variant.",
+        "The app remains usable and readable with the aura effect enabled."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/aura/AuraEffect.tsx",
+          "operation": "create",
+          "description": "Create a non-blocking animated aura effect layer (e.g., pulsing glow/energy ring/particle haze) designed to sit behind content and keep text/buttons readable."
+        },
+        {
+          "path": "frontend/src/hooks/usePrefersReducedMotion.ts",
+          "operation": "create",
+          "description": "Add a small hook to detect the user’s reduced-motion preference and expose a boolean used to reduce/disable animations."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS animations and reduced-motion fallbacks (via prefers-reduced-motion) so the aura effect degrades to static/low-motion visuals on low-end devices or when reduced motion is enabled."
+        },
+        {
+          "path": "frontend/src/features/landing/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Wire the AuraEffect into the landing page behind the primary content and ensure pointer events/stacking keep the page fully interactive and readable."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Include and render generated static image assets (background and emblem/logo) from frontend/public/assets/generated and incorporate them into the landing visuals.",
+      "acceptanceCriteria": [
+        "The generated images exist in frontend/public/assets/generated and are referenced directly by the frontend.",
+        "The landing page visually incorporates the generated background and emblem/logo assets."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/aurise-aura-bg.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the generated static background image asset at the exact path frontend/public/assets/generated/aurise-aura-bg.dim_1920x1080.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/aurise-emblem.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated static emblem/logo image asset at the exact path frontend/public/assets/generated/aurise-emblem.dim_512x512.png."
+        },
+        {
+          "path": "frontend/src/features/landing/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Reference the static assets directly from the frontend (frontend/public/assets/generated/aurise-aura-bg.dim_1920x1080.png and frontend/public/assets/generated/aurise-emblem.dim_512x512.png) and incorporate them into the landing layout (background treatment + emblem near the “Aurise” title)."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add styling hooks for using the generated background and emblem cohesively with the aura theme (e.g., background placement/overlay, emblem glow framing) while keeping content readable."
+        }
+      ]
+    }
+  ]
+}

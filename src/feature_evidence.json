@@ -1,0 +1,85 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-minimal-aurise-application-shell-with-a-single-landing-page-that-clearly-displays-the-app-name-aurise",
+      "featureTitle": "Create a minimal Aurise application shell with a single landing page that clearly displays the app name “Aurise”.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-cohesive-dark-fantasy-aura-visual-theme-inspired-by-solo-leveling-high-contrast-dark-background-glowing-aura-accents-dramatic-typography-and-apply-it-consistently-across-the-landing-page-layout-colors-buttons-headings-use-english-for-all-user-facing-text",
+      "featureTitle": "Implement a cohesive, dark fantasy “aura” visual theme inspired by Solo Leveling (high contrast dark background, glowing aura accents, dramatic typography) and apply it consistently across the landing page (layout, colors, buttons, headings). Use English for all user-facing text.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/features/landing/LandingPage.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-an-animated-aura-visual-effect-on-the-landing-page-e-g-pulsing-flowing-glow-particle-haze-or-energy-ring-that-runs-smoothly-on-desktop-browsers-and-degrades-gracefully-on-low-end-devices-reduced-motion",
+      "featureTitle": "Add an animated aura visual effect on the landing page (e.g., pulsing/flowing glow, particle haze, or energy ring) that runs smoothly on desktop browsers and degrades gracefully on low-end devices (reduced motion).",
+      "files": [
+        "frontend/src/components/aura/AuraEffect.tsx",
+        "frontend/src/features/landing/LandingPage.tsx",
+        "frontend/src/hooks/usePrefersReducedMotion.ts",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-and-include-custom-static-image-assets-that-match-the-aura-theme-background-and-emblem-logo-and-render-them-from-the-frontend-as-static-files-under-frontend-public-assets-generated-do-not-serve-images-via-the-backend",
+      "featureTitle": "Generate and include custom static image assets that match the aura theme (background and emblem/logo) and render them from the frontend as static files under frontend/public/assets/generated (do not serve images via the backend).",
+      "files": [
+        "frontend/src/features/landing/LandingPage.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

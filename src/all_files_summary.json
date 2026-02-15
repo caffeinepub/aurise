@@ -1,0 +1,18 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no backend logic.",
+  "feature_evidence.json": "Feature evidence report mapping implemented features to affected files, components, tests, and confidence levels.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing the purpose of key frontend React and styling files.",
+  "frontend/index.css": "Tailwind base setup defining CSS variables and theme tokens for light and dark modes with global styling.",
+  "frontend/index.html": "Root HTML file mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Root React component that imports global styles and renders the LandingPage.",
+  "frontend/src/components/aura/AuraEffect.tsx": "Animated aura background component with orb and particle effects that adapt to reduced-motion settings.",
+  "frontend/src/features/landing/LandingPage.tsx": "Main landing page with aura visuals, branding, background assets, navigation, hero content, and sections.",
+  "frontend/src/hooks/useActor.ts": "Hook creating and managing a backend actor tied to Internet Identity state using React Query.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context and hooks for managing Internet Identity authentication, session loading, and login flows.",
+  "frontend/src/hooks/usePrefersReducedMotion.ts": "Hook detecting reduced-motion user preference via media query.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for future backend-related React Query hooks.",
+  "frontend/src/index.css": "Defines Tailwind layers and extensive CSS variables for light/dark aura themes plus custom utility classes for glow, buttons, and cards.",
+  "frontend/src/main.tsx": "Bootstraps the React app with React Query and the InternetIdentityProvider before rendering App.",
+  "frontend/tailwind.config.js": "Configures Tailwind with dark mode, custom color variables, typography, container settings, animations, and aura-related color extensions.",
+  "project_state.json": "Stores project metadata, requirements, features, pending requests, and asset needs for the Aurise app."
+}

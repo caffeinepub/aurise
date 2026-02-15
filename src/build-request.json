@@ -1,0 +1,93 @@
+{
+  "kind": "build_request",
+  "title": "Create 'Aurise' web app with Solo Leveling–inspired aura visual theme",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a minimal Aurise application shell with a single landing page that clearly displays the app name “Aurise”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Aurise apk create and solo leveling jaisa e aura"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Opening the app shows a landing page with the title text “Aurise”.",
+        "No placeholder/lorem-ipsum branding text is visible on the page."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a cohesive, dark fantasy “aura” visual theme inspired by Solo Leveling (high contrast dark background, glowing aura accents, dramatic typography) and apply it consistently across the landing page (layout, colors, buttons, headings). Use English for all user-facing text.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "solo leveling jaisa e aura"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The landing page uses a consistent dark + glowing-aura aesthetic (background, typography, and UI accents feel like one theme).",
+        "All visible UI text is in English."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add an animated aura visual effect on the landing page (e.g., pulsing/flowing glow, particle haze, or energy ring) that runs smoothly on desktop browsers and degrades gracefully on low-end devices (reduced motion).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "solo leveling jaisa e aura"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The aura effect animates continuously without blocking page interaction.",
+        "If the user prefers reduced motion, the animation is reduced or replaced with a static/low-motion variant.",
+        "The app remains usable and readable with the aura effect enabled."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Generate and include custom static image assets that match the aura theme (background and emblem/logo) and render them from the frontend as static files under frontend/public/assets/generated (do not serve images via the backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "solo leveling jaisa e aura"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The generated images exist in frontend/public/assets/generated and are referenced directly by the frontend.",
+        "The landing page visually incorporates the generated background and emblem/logo assets."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not attempt to generate or distribute an Android APK; deliver as a React web application running on the Internet Computer stack.",
+    "Avoid using copyrighted “Solo Leveling” names, characters, or exact artwork; only use an inspired-by visual style.",
+    "Do not edit files under frontend/src/components/ui or other immutable paths; compose those components instead if needed."
+  ],
+  "nonGoals": [
+    "User authentication flows (Internet Identity) unless explicitly requested later.",
+    "Backend data models, persistence, or CRUD features (no app functionality was specified beyond visuals).",
+    "Any external API integrations."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Abstract dark fantasy aura background with swirling energy, particle haze, and high-contrast lighting (aurise-aura-bg.dim_1920x1080.png)",
+      "Minimal glowing emblem/logo mark: stylized ‘A’ with aura glow, dark fantasy feel (aurise-emblem.dim_512x512.png)"
+    ],
+    "edits": []
+  }
+}

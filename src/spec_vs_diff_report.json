@@ -1,0 +1,62 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T17:38:17.629Z",
+  "summary": "Implements a React landing page for “Aurise” with a dark aura-themed Tailwind styling and an animated background effect that respects reduced-motion. However, the required generated static image assets are not present in the diff summary, and the change set introduces Internet Identity / actor plumbing that was explicitly listed as a non-goal.",
+  "missing_requirements": [
+    {
+      "id": "REQ-4",
+      "requirement": "Generate and include custom static image assets (background + emblem) as static files under frontend/public/assets/generated and reference them from the frontend.",
+      "reason": "The landing page references the expected paths, but the diff summary shows no added files under frontend/public/assets/generated, so the required images themselves are not included/verified as present.",
+      "evidence": [
+        "frontend/src/features/landing/LandingPage.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity provider/authentication context and identity-aware actor creation (React Query integration).",
+      "reason": "BuildRequest explicitly lists user authentication flows (Internet Identity) as a non-goal unless requested later; these hooks/providers go beyond the purely-visual landing page requirements.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "React Query client/provider setup.",
+      "reason": "No backend functionality or data fetching was requested (non-goals include backend models/CRUD/external APIs), but React Query is wired in globally.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    },
+    {
+      "description": "Added backend canister stub (empty actor).",
+      "reason": "No backend work was requested (scope was visuals only), yet a backend entry file was added (even if minimal).",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/aura/AuraEffect.tsx",
+    "frontend/src/features/landing/LandingPage.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/usePrefersReducedMotion.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

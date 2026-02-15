@@ -1,0 +1,9 @@
+{
+  "frontend/src/App.tsx": "Root application component that renders the LandingPage as the single-page experience.",
+  "frontend/src/features/landing/LandingPage.tsx": "Complete dark fantasy landing page with hero section, features grid, CTA, header, and footer incorporating the Aurise branding, generated assets, and aura-themed UI components.",
+  "frontend/src/components/aura/AuraEffect.tsx": "Animated background aura effect component with pulsing orbs and floating particles that respects reduced-motion preferences.",
+  "frontend/src/hooks/usePrefersReducedMotion.ts": "Custom React hook that detects user's reduced-motion preference via media query for accessibility.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for future React Query hooks when backend functionality is added.",
+  "frontend/src/index.css": "Complete dark fantasy aura theme with OKLCH color system, custom animations (pulse, rotate, float), glow effects using inline styles instead of @apply with opacity modifiers, and reduced-motion fallbacks.",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration with aura color tokens, Inter font family, and custom design system settings."
+}
